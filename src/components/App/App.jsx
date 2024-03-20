@@ -5,6 +5,7 @@ import SearchBox from "../SearchBox/SearchBox";
 import ContactList from "../ContactList/ContactList";
 
 import initialContacts from "../../contacts.json";
+import css from "./App.module.css";
 
 const LS_KEY = "contacts";
 
@@ -47,7 +48,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className={css.container}>
       <h1>Phonebook</h1>
       <ContactForm onFormSumbit={onFormSumbit} />
       <SearchBox filterValue={filter} onInputChange={onInputChange} />

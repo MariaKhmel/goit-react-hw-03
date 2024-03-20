@@ -29,3 +29,11 @@ img {
 li {
   list-style-type: none;
 }
+
+h1 {
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 8px 16px;
+}

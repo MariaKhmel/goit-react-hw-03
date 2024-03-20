@@ -35,22 +35,22 @@ const ContactForm = ({ onFormSumbit }) => {
       }}
       validationSchema={schema}
     >
-      <Form>
-        <label>
-          Name
-          <Field type="text" name="name" />
-          <ErrorMessage name="name">
-            {(msg) => <div className={css.error}>{msg}</div>}
-          </ErrorMessage>
-        </label>
-        <label htmlFor="number">
-          Number
-          <Field type="number" name="number" />
-          <ErrorMessage name="number">
-            {(msg) => <div className={css.error}>{msg}</div>}
-          </ErrorMessage>
-        </label>
-        <button type="submit">Add contact</button>
+      <Form className={css.form}>
+        <label htmlFor="name">Name</label>
+        <Field type="text" name="name" />
+        <ErrorMessage name="name">
+          {(msg) => <div className={css.error}>{msg}</div>}
+        </ErrorMessage>
+
+        <label htmlFor="number">Number</label>
+        <Field type="number" name="number" />
+        <ErrorMessage name="number">
+          {(msg) => <div className={css.error}>{msg}</div>}
+        </ErrorMessage>
+
+        <button type="submit" className={css.formBtn}>
+          Add contact
+        </button>
       </Form>
     </Formik>
   );
